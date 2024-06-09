@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
+class SignUpPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,16 +18,22 @@ class LoginPage extends StatelessWidget {
             ),
             SizedBox(height: 20),
             Text(
-              'Login',
+              'Sign Up',
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 10),
             Text(
-              'Selamat datang kembali di SmartCart!',
+              'Buat akun baru Anda!',
               style: TextStyle(fontSize: 16),
+            ),
+            SizedBox(height: 20),
+            TextFormField(
+              decoration: InputDecoration(
+                labelText: 'email',
+                border: OutlineInputBorder(),
+              ),
             ),
             SizedBox(height: 20),
             TextFormField(
@@ -44,20 +50,12 @@ class LoginPage extends StatelessWidget {
               ),
               obscureText: true,
             ),
-            SizedBox(height: 10),
-            Align(
-              alignment: Alignment.centerRight,
-              child: TextButton(
-                onPressed: () {},
-                child: Text('Lupa kata sandi? Klik disini'),
-              ),
-            ),
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                Navigator.pushReplacementNamed(context, '/home');
+                // Handle sign up action
               },
-              child: Text('Login'),
+              child: Text('Sign Up'),
               style: ElevatedButton.styleFrom(
                 primary: Colors.orange,
                 padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
@@ -67,9 +65,9 @@ class LoginPage extends StatelessWidget {
             SizedBox(height: 20),
             TextButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/sign_up');  // Navigate to sign up page
+                Navigator.pushNamed(context, '/login');
               },
-              child: Text('Belum punya akun? Sign Up'),
+              child: Text('Sudah punya akun? Login'),
             ),
           ],
         ),

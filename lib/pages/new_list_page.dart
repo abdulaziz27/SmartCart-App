@@ -1,41 +1,44 @@
 import 'package:flutter/material.dart';
+import 'add_item_page.dart';  // Import the new page
 
-class NewListPage extends StatelessWidget {
+class NewListPage extends StatefulWidget {
+  @override
+  _NewListPageState createState() => _NewListPageState();
+}
+
+class _NewListPageState extends State<NewListPage> {
+  List<String> items = [];
+  int checkedCount = 0;
+
+  void _addItem(String item) {
+    setState(() {
+      items.add(item);
+    });
+  }
+
+  void _toggleChecked(int index) {
+    setState(() {
+      checkedCount += items[index].startsWith('[x] ') ? -1 : 1;
+      items[index] = items[index].startsWith('[x] ') ? items[index].substring(4) : '[x] ${items[index]}';
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Daftar Baru'),
+        title: Text('Belanja Bulanan'),
         backgroundColor: Colors.orange,
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Image.asset(
-              'assets/logo.png', // Update this path to your logo image location
-              height: 100,
-            ),
-            SizedBox(height: 20),
-            Text(
-              'Belanja Bulanan',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                color: Colors.orange,
-              ),
-            ),
-            SizedBox(height: 20),
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
             Wrap(
               spacing: 8.0,
-              children: [
+              runSpacing: 4.0,
+              children: <Widget>[
                 Chip(
                   label: Text('Belanja'),
                 ),
@@ -52,8 +55,11 @@ class NewListPage extends StatelessWidget {
             ),
             Spacer(),
             ElevatedButton(
-              onPressed: () {
-                // Add functionality to create new list
+              onPressed: () async {
+                final newItem = await Navigator.pushNamed(context, '/add_item');
+                if (newItem != null && newItem is String) {
+                  _addItem(newItem);
+                }
               },
               child: Text('Buat'),
               style: ElevatedButton.styleFrom(

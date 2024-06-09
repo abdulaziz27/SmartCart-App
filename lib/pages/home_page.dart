@@ -56,7 +56,7 @@ class HomePage extends StatelessWidget {
                     ],
                     onTap: (index) {
                       if (index == 1) {
-                        Navigator.pushNamed(context, '/another');
+                        Navigator.pushNamed(context, '/profile');
                       }
                     },
                   ),
