@@ -1,5 +1,28 @@
 import 'package:flutter/material.dart';
-import 'shopping_list_page.dart';
+import 'package:smartcart_app/pages/new_list_page.dart';
+import 'package:smartcart_app/pages/shopping_list_page.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Shopping List',
+      theme: ThemeData(
+        primarySwatch: Colors.orange,
+      ),
+      home: HomePage(),
+      routes: {
+        '/shopping_list': (context) => ShoppingListPage(category: 'Belanja Bulanan'),
+        '/new_list': (context) => NewListPage(),
+        
+      },
+    );
+  }
+}
 
 class HomePage extends StatelessWidget {
   @override
@@ -35,9 +58,9 @@ class HomePage extends StatelessWidget {
                 children: [
                   ElevatedButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, '/new_list');
+                      Navigator.pushNamed(context, '/new_list'); // Mengarahkan ke halaman NewListPage
                     },
-                    child: Text('Daftar Baru'),
+                    child: Text('Buat Daftar'),
                     style: ElevatedButton.styleFrom(
                       primary: Colors.orange,
                       padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
