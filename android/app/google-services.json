@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "681483813998",
+    "project_id": "smartcartapp-d0abb",
+    "storage_bucket": "smartcartapp-d0abb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:681483813998:android:47af1d29c39c6af706d27f",
+        "android_client_info": {
+          "package_name": "com.example.smartcart_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHP22I5lfxU5EStg_DV7xsibqXGAkRMX8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

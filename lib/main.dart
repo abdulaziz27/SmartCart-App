@@ -3,8 +3,8 @@ import 'package:smartcart_app/pages/new_list_page.dart';
 import 'pages/splash_screen.dart';
 import 'pages/login_page.dart';
 import 'package:smartcart_app/pages/home_page.dart';
-import 'pages/add_item_page.dart';  // Import the new page
-import 'pages/sign_up_page.dart';  // Import the new page
+import 'pages/add_item_page.dart';
+import 'pages/sign_up_page.dart';
 import 'pages/profile_page.dart';
 
 void main() {
