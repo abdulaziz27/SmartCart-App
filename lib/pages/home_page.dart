@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'shopping_list_page.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -88,6 +89,14 @@ class ShoppingList extends StatelessWidget {
             tileColor: category == 'Belanja Bulanan' ? Colors.orange : Colors.orange.shade100,
             title: Text(category),
             trailing: Icon(Icons.more_vert),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ShoppingListPage(category: category),
+                ),
+              );
+            },
           ),
         );
       }).toList(),
