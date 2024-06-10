@@ -26,7 +26,7 @@ class AddItemPage extends StatelessWidget {
                 Navigator.pop(context, _controller.text);
               },
               child: Text('Tambah'),
-              style: ElevatedButton.styleFrom(primary: Colors.orange),
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.orange),
             ),
           ],
         ),

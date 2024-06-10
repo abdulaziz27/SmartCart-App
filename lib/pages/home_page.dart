@@ -62,7 +62,7 @@ class HomePage extends StatelessWidget {
                     },
                     child: Text('Buat Daftar'),
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.orange,
+                      backgroundColor: Colors.orange,
                       padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
                       textStyle: TextStyle(fontSize: 16),
                     ),

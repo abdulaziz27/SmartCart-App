@@ -85,7 +85,7 @@ class _ProfilePageState extends State<ProfilePage> {
               },
               child: Text('Save Changes'),
               style: ElevatedButton.styleFrom(
-                primary: Colors.orange,
+                backgroundColor: Colors.orange,
                 padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
                 textStyle: TextStyle(fontSize: 16),
               ),

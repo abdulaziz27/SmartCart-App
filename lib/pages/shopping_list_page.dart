@@ -207,7 +207,7 @@ class _ItemDialogState extends State<ItemDialog> {
             }
           },
           child: Text('Simpan'),
-          style: ElevatedButton.styleFrom(primary: Colors.orange),
+          style: ElevatedButton.styleFrom(backgroundColor: Colors.orange),
         ),
       ],
     );

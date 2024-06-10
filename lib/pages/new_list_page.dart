@@ -33,7 +33,7 @@ class NewListPage extends StatelessWidget {
                 );
               },
               child: Text('Buat Daftar'),
-              style: ElevatedButton.styleFrom(primary: Colors.orange),
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.orange),
             ),
           ],
         ),
